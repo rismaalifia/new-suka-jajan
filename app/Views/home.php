@@ -32,7 +32,7 @@
     <div class="row g-4 mb-5">
         <?php foreach ($topRated as $k): ?>
         <div class="col-md-3">
-            <div class="card card-kuliner h-100">
+            <div class="card card-kuliner h-100 shadow-sm">
                 <img src="<?= $k['foto_utama'] ? '/uploads/thumbnails/' . esc($k['foto_utama']) : 'https://via.placeholder.com/300x200?text=No+Image' ?>"
                      class="card-img-top" style="height: 180px; object-fit: cover;">
                 <div class="card-body">
@@ -55,7 +55,7 @@
     <div class="row g-4">
         <?php foreach ($latest as $k): ?>
         <div class="col-md-3">
-            <div class="card card-kuliner h-100">
+            <div class="card card-kuliner h-100 shadow-sm">
                 <img src="<?= $k['foto_utama'] ? '/uploads/thumbnails/' . esc($k['foto_utama']) : 'https://via.placeholder.com/300x200?text=No+Image' ?>"
                      class="card-img-top" style="height: 180px; object-fit: cover;">
                 <div class="card-body">
