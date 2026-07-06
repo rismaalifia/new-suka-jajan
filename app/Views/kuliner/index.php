@@ -80,7 +80,7 @@
             <?php else: ?>
             <div class="row g-3">
                 <?php foreach ($kuliners as $k): ?>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card card-kuliner h-100 shadow-sm">
                         <img src="<?= $k['foto_utama'] ? '/uploads/thumbnails/' . esc($k['foto_utama']) : 'https://via.placeholder.com/300x200?text=No+Image' ?>"
                              class="card-img-top" style="height: 160px; object-fit: cover;">
