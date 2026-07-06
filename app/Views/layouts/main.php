@@ -11,7 +11,7 @@
     <style>
         :root {
             --sj-cyan: #12BFE2;
-            --sj-red: #EA2131;
+            --sj-red: #EB2132;
             --sj-yellow: #F8CD0E;
             --sj-navy: #102C53;
             --sj-navy-light: #1a3d6e;
