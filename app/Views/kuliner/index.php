@@ -8,7 +8,7 @@
         <div class="col-md-3">
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
-                    <h6 class="fw-bold">Filter</h6>
+                    <h6 class="fw-bold text-uppercase">Filter</h6>
                     <form method="get" action="/kuliner">
                         <div class="mb-3">
                             <label class="form-label small">Kategori</label>
