@@ -269,7 +269,7 @@
 
     <footer>
         <div class="container text-center">
-            <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> SukaJajan - Platform Kuliner Semarang</p>
+            <p class="mb-1 fw-bold"><i class="bi bi-geo-alt-fill"></i> SukaJajan - Platform Kuliner Semarang</p>
             <small>Powered by CodeIgniter 4, Leaflet.js & OpenStreetMap Nominatim</small>
         </div>
     </footer>
