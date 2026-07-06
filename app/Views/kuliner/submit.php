@@ -93,6 +93,12 @@ function cariKoordinat() {
                 container.innerHTML = '<div class="list-group-item text-muted">Tidak ditemukan.</div>';
                 return;
             }
+            
+            // Otomatis isi dengan hasil pencarian pertama
+            document.getElementById('latitude').value = data[0].lat;
+            document.getElementById('longitude').value = data[0].lon;
+            showPreviewMap(data[0].lat, data[0].lon);
+
             data.forEach(function(item) {
                 var el = document.createElement('a');
                 el.href = '#';
@@ -107,6 +113,9 @@ function cariKoordinat() {
                 };
                 container.appendChild(el);
             });
+        })
+        .catch(e => {
+            alert('Terjadi kesalahan saat mencari koordinat. Silakan coba lagi.');
         });
 }
 
