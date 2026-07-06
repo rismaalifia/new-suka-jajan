@@ -4,7 +4,7 @@
 <div class="hero-section">
     <div class="container">
         <h1 class="display-4 fw-bold mb-3"><i class="bi bi-geo-alt-fill"></i> SukaJajan</h1>
-        <p class="lead mb-4">Temukan tempat makan & jajanan terbaik di Semarang!</p>
+        <p class="lead mb-4 fw-light">Temukan tempat makan & jajanan terbaik di Semarang!</p>
         <form action="/search" method="get" class="d-flex justify-content-center">
             <div class="input-group" style="max-width: 500px;">
                 <input type="text" name="q" class="form-control form-control-lg" placeholder="Cari tempat makan...">
