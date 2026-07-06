@@ -51,7 +51,7 @@
         <?php endforeach; ?>
     </div>
 
-    <h4 class="mb-3"><i class="bi bi-clock"></i> Baru Ditambahkan</h4>
+    <h4 class="mb-3 fw-bold"><i class="bi bi-clock"></i> Baru Ditambahkan</h4>
     <div class="row g-4">
         <?php foreach ($latest as $k): ?>
         <div class="col-md-3">
