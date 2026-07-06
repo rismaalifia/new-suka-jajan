@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 <div class="container py-4">
-    <h3 class="mb-4"><i class="bi bi-shop"></i> Jelajahi Kuliner Semarang</h3>
+    <h3 class="mb-4 fw-bold"><i class="bi bi-shop"></i> Jelajahi Kuliner Semarang</h3>
 
     <div class="row">
         <div class="col-md-3">
