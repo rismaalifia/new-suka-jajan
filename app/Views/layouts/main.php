@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --sj-cyan: #11BFE1;
+            --sj-cyan: #12BFE2;
             --sj-red: #EA2131;
             --sj-yellow: #F8CD0E;
             --sj-navy: #102C53;
