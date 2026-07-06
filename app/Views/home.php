@@ -16,7 +16,7 @@
 
 <div class="container py-5">
     <div class="mb-4">
-        <h4><i class="bi bi-grid"></i> Kategori</h4>
+        <h4 class="mb-3 fw-bold"><i class="bi bi-grid"></i> Kategori</h4>
         <div class="d-flex flex-wrap gap-2 mt-3">
             <?php foreach ($categories as $cat): ?>
             <a href="/kuliner?category=<?= esc($cat['slug']) ?>" class="btn btn-sj-outline rounded-pill">
