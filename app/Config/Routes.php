@@ -35,6 +35,7 @@ $routes->get('kuliner/(:segment)', 'Kuliner::detail/$1');
 
 // Geocoding API (internal)
 $routes->get('geocode', 'Geocode::search');
+$routes->get('geocode/reverse', 'Geocode::reverse');
 
 // Admin
 $routes->group('admin', ['filter' => 'admin'], static function ($routes) {

@@ -36,4 +36,27 @@ class Geocode extends BaseController
 
         return $this->response->setJSON($data);
     }
+    public function reverse()
+    {
+        $lat = $this->request->getGet('lat');
+        $lon = $this->request->getGet('lon');
+        if (!$lat || !$lon) {
+            return $this->response->setJSON(['error' => 'Latitude dan Longitude diperlukan']);
+        }
+
+        $url = 'https://nominatim.openstreetmap.org/reverse?' . http_build_query([
+            'lat'    => $lat,
+            'lon'    => $lon,
+            'format' => 'json',
+        ]);
+
+        $client = \Config\Services::curlrequest();
+        $response = $client->get($url, [
+            'headers' => [
+                'User-Agent' => 'SukaJajan/1.0 (contact@sukajajan.com)',
+            ],
+        ]);
+
+        return $this->response->setBody($response->getBody())->setContentType('application/json');
+    }
 }

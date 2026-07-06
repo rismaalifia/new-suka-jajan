@@ -27,6 +27,9 @@
                             <label class="form-label">Alamat *</label>
                             <div class="input-group">
                                 <input type="text" name="alamat" id="alamat" class="form-control" value="<?= old('alamat') ?>" required>
+                                <button type="button" class="btn btn-secondary" onclick="getLocation()" title="Gunakan Lokasi Saat Ini (GPS)">
+                                    <i class="bi bi-crosshair"></i> GPS
+                                </button>
                                 <button type="button" class="btn text-dark fw-bold" style="background: var(--sj-yellow);" onclick="cariKoordinat()">
                                     <i class="bi bi-geo-alt"></i> Cari Koordinat
                                 </button>
@@ -130,6 +133,32 @@ function showPreviewMap(lat, lon) {
     }
     if (previewMarker) previewMap.removeLayer(previewMarker);
     previewMarker = L.marker([lat, lon]).addTo(previewMap);
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            
+            document.getElementById('latitude').value = lat;
+            document.getElementById('longitude').value = lon;
+            showPreviewMap(lat, lon);
+            
+            fetch('/geocode/reverse?lat=' + lat + '&lon=' + lon)
+                .then(r => r.json())
+                .then(data => {
+                    if(data && data.display_name) {
+                        document.getElementById('alamat').value = data.display_name;
+                    }
+                })
+                .catch(e => console.error(e));
+        }, function(error) {
+            alert('Tidak dapat mengakses lokasi GPS. Pastikan izin lokasi diberikan pada browser Anda.');
+        });
+    } else {
+        alert('Browser Anda tidak mendukung fitur Geolocation.');
+    }
 }
 </script>
 <?= $this->endSection() ?>
