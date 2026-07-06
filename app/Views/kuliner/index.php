@@ -66,7 +66,7 @@
                             <input type="hidden" name="lat" id="input-lat" value="<?= esc(($this->request ?? service('request'))->getGet('lat') ?? '') ?>">
                             <input type="hidden" name="lng" id="input-lng" value="<?= esc(($this->request ?? service('request'))->getGet('lng') ?? '') ?>">
                         </div>
-                        <button type="submit" class="btn btn-sj btn-sm w-100">
+                        <button type="submit" class="btn btn-sj btn-sm w-100 rounded-pill">
                             <i class="bi bi-funnel"></i> Terapkan
                         </button>
                     </form>
