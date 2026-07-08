@@ -1,6 +1,5 @@
 # SukaJajan - Platform Kuliner Semarang
 
-<<<<<<< HEAD
 SukaJajan adalah aplikasi sistem informasi kuliner berbasis web yang digunakan untuk mencari, mengelola, memberikan ulasan, serta menyimpan kuliner favorit.
 
 Aplikasi ini dibangun menggunakan framework CodeIgniter 4 dengan konsep MVC (Model View Controller).
@@ -214,7 +213,6 @@ Penerapan normalisasi:
 =======
 ## Setup
 
->>>>>>> c8d578ea4e82eb7a50c3dfcb7d4c88e23eb891f6
 ```bash
 composer install
 cp env .env
@@ -252,7 +250,6 @@ php spark migrate:rollback
 php spark migrate
 php spark db:seed InitialSeeder
 ```
-<<<<<<< HEAD
 
 # Teknologi yang Digunakan
 PHP
@@ -262,5 +259,3 @@ HTML
 CSS
 Bootstrap
 JavaScript
-=======
->>>>>>> c8d578ea4e82eb7a50c3dfcb7d4c88e23eb891f6
