@@ -29,7 +29,7 @@
                         <div class="input-group">
                             <input type="text" name="alamat" id="alamat" class="form-control" value="<?= esc($kuliner['alamat'] ?? '') ?>" required>
                             <button type="button" class="btn btn-warning" onclick="cariKoordinat()">
-                                <i class="bi bi-geo-alt"></i> Geocode
+                                <i class="bi bi-geo-alt"></i> Cari Koordinat
                             </button>
                         </div>
                         <div id="geocode-results" class="list-group mt-1"></div>
@@ -92,7 +92,7 @@ function cariKoordinat() {
             var container = document.getElementById('geocode-results');
             container.innerHTML = '';
             if (data.length === 0) {
-                container.innerHTML = '<div class="list-group-item text-muted">Tidak ditemukan.</div>';
+                container.innerHTML = '<div class="list-group-item text-muted">Alamat Tidak ditemukan.</div>';
                 return;
             }
             

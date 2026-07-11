@@ -214,7 +214,7 @@ class Kuliner extends BaseController
         $kuliner = $kulinerModel->find($kulinerId);
 
         if (!$kuliner) {
-            return redirect()->back()->with('error', 'Tempat tidak ditemukan.');
+            return redirect()->back()->with('error', 'Alamat tempat tidak ditemukan.');
         }
 
         if ($photoModel->countByKuliner($kulinerId) >= 3) {
